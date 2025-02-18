@@ -25,7 +25,7 @@ const Sidebar = () => {
     <>
       <button
         onClick={toggleSidebar}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-white shadow-lg"
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-white shadow-lg hover:cursor-pointer"
         aria-label="Toggle Sidebar"
       >
         {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -40,7 +40,7 @@ const Sidebar = () => {
       )}
 
       <aside
-        className={`fixed top-0 left-0 z-40 h-screen w-72 lg:w-[250px] bg-[#f9f7fd] text-black flex flex-col justify-between items-center transition-transform duration-300 shadow-lg
+        className={`fixed top-0 left-0 z-40 h-screen w-[170px] lg:w-[200px] bg-[#f9f7fd] text-black flex flex-col justify-between items-center transition-transform duration-300 shadow-lg
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}
       >
         <div className="mt-8">
