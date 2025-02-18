@@ -1,7 +1,7 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import logo from '../assets/logo.svg';
-import { Facebook, Github, Linkedin } from 'lucide-react';
+import { Facebook, Github, Linkedin, Mouse } from 'lucide-react';
 
 const socialMedia = [
   {
@@ -22,7 +22,7 @@ const Home = () => {
     <>
       <header className="flex flex-col justify-center items-center h-screen bg-[#eeedf1f2] space-y-7">
         <img src={logo} alt="logo" />
-        <div className="flex justify-center items-center flex-col leading-12">
+        <div className="flex justify-center items-center flex-col space-y-2">
           <h1 className="text-purple-400 text-4xl font-bold">SOkNA Chun.</h1>
           <p className="font-semibold text-xl">
             Hiiii! I'm a Front-End Developer
@@ -49,6 +49,13 @@ const Home = () => {
         >
           Hire Me!
         </a>
+        <div className="flex absolute bottom-5 flex-col items-center gap-4 animate-[bounce_2s_ease-in-out_infinite]">
+          <p className="text-sm font-medium opacity-80">Scroll Down!</p>
+          <Mouse
+            size={30}
+            className="animate-[fadeInOut_2s_ease-in-out_infinite]"
+          />
+        </div>
       </header>
       <Sidebar />
     </>
