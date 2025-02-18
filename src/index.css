@@ -1,9 +1,13 @@
 @import 'tailwindcss';
 
 .border-opacity {
-  border-right: rgba(0, 0, 0, 0.2) 1px solid;
+  border-right: rgb(0, 0, 0) 1px solid;
 }
 
 .toggle-menu-bg {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: #eeedf1f2;
 }

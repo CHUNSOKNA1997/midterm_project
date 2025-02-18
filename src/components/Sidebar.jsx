@@ -10,10 +10,10 @@ import {
 } from 'lucide-react';
 
 const Links = [
-  { href: '#Home', name: 'Home', logo: <House size={24} /> },
-  { href: '#About', name: 'About', logo: <CircleUser size={24} /> },
-  { href: '#Projects', name: 'Projects', logo: <FolderKanban size={24} /> },
-  { href: '#Contact', name: 'Contact', logo: <Contact size={24} /> },
+  { href: '#Home', logo: <House size={24} /> },
+  { href: '#About', logo: <CircleUser size={24} /> },
+  { href: '#Projects', logo: <FolderKanban size={24} /> },
+  { href: '#Contact', logo: <Contact size={24} /> },
 ];
 
 const Sidebar = () => {
@@ -40,10 +40,10 @@ const Sidebar = () => {
       )}
 
       <aside
-        className={`fixed top-0 left-0 z-40 h-screen w-[170px] lg:w-[200px] bg-[#f9f7fd] text-black flex flex-col justify-between items-center transition-transform duration-300 shadow-lg
+        className={`fixed top-0 left-0 z-40 h-screen w-[110px] lg:w-[100px] bg-[#eeedf1f2] text-black flex flex-col justify-between items-center transition-transform duration-300 shadow-lg
           ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}
       >
-        <div className="mt-8">
+        <div className="mt-20">
           <CodeXml size={50} />
         </div>
 
@@ -57,7 +57,6 @@ const Sidebar = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   {link.logo}
-                  {link.name}
                 </a>
               </li>
             ))}
