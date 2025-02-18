@@ -1,0 +1,5 @@
+@import 'tailwindcss';
+
+.border-opacity {
+  border-right: rgba(0, 0, 0, 0.2) 1px solid;
+}
