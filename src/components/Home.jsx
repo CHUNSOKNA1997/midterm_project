@@ -20,7 +20,7 @@ const socialMedia = [
 const Home = () => {
   return (
     <>
-      <header className="flex flex-col justify-center items-center h-screen bg-[#eeedf1f2] space-y-7">
+      <header className="flex flex-col justify-center items-center h-screen bg-[#eeedf1f2] space-y-12">
         <img src={logo} alt="logo" />
         <div className="flex justify-center items-center flex-col space-y-2">
           <h1 className="text-purple-400 text-4xl font-bold">SOkNA Chun.</h1>
@@ -44,7 +44,7 @@ const Home = () => {
           </li>
         </ul>
         <a
-          href="#"
+          href="mailto:chun.sokna.1222@gmail.com"
           className="bg-red-500 py-3 px-6 rounded-md text-white font-semibold hover:bg-red-400 transition-colors duration-300"
         >
           Hire Me!

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Coffee, FolderCheck, GitGraph } from 'lucide-react';
 import aboutLogo from '../assets/aboutLogo.svg';
 
 const About = () => {
@@ -12,58 +13,66 @@ const About = () => {
   ];
 
   return (
-    <main className="ml-0 lg:ml-[110px] w-full min-h-screen">
-      <div className="w-full p-4 sm:p-6">
-        <div className="max-w-6xl mx-auto">
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
-            About Me
-          </h1>
+    <main className="w-full min-h-screen lg:pl-[110px]">
+      <div className="max-w-6xl h-screen mx-auto mt-10">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center lg:text-left">
+          About Me
+        </h1>
 
-          <div className="flex flex-col justify-center items-center lg:flex-row gap-6 sm:gap-17 lg:items-start">
-            <div className="w-48 sm:w-64 lg:w-80">
-              <img
-                src={aboutLogo}
-                alt="About section illustration"
-                className="w-full rounded-4xl"
-              />
+        <div className="flex flex-col lg:flex-row mt-27 gap-12 lg:space-x-32 justify-center items-center ">
+          <div className="w-full flex flex-col lg:justify-center items-center gap-7">
+            <img
+              src={aboutLogo}
+              alt="About section illustration"
+              className="w-32 sm:w-40 lg:w-64 rounded-full mb-6 lg:mb-0 border-purple-600 border-[2px]"
+            />
+
+            <div className="flex justify-center items-center lg:gap-6 lg:mt-0 space-x-7 lg:space-x-7">
+              {[
+                { icon: Coffee, label: '264 Cups of Coffee' },
+                { icon: FolderCheck, label: '8 Repositories' },
+                { icon: GitGraph, label: '44 Contributions' },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-center space-y-2 text-center"
+                >
+                  <item.icon size={32} className="text-purple-600" />
+                  <p className="text-gray-700">{item.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="w-full bg-white rounded-xl shadow-md p-6 sm:p-8">
+            <p className="text-lg text-gray-700 leading-relaxed mb-6 text-center lg:text-left">
+              I am passionate about crafting beautiful, efficient, and scalable
+              web applications. Specializing in front-end development with
+              ReactJS and Tailwind CSS, I focus on creating high-performance,
+              responsive interfaces with an emphasis on user experience. I
+              thrive in dynamic environments where creativity meets
+              functionality.
+            </p>
+
+            <div className="flex justify-center lg:justify-start">
+              <button className="px-6 py-3 border-2 border-purple-500 text-purple-600 rounded-lg hover:bg-purple-200 transition-all duration-300 font-medium hover:cursor-pointer">
+                Download my CV
+              </button>
             </div>
 
-            <div className="w-full lg:w-1/2 bg-white rounded-xl">
-              <div className="p-4 sm:p-6 lg:p-8">
-                <div className="mb-6 sm:mb-8">
-                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-6 sm:mb-8">
-                    Passionate about crafting beautiful, efficient, and scalable
-                    web applications, I specialize in front-end development
-                    using ReactJS and Tailwind CSS. With a keen eye for design
-                    and a focus on user experience, I create responsive,
-                    high-performance interfaces that bring ideas to life.
-                    Whether building sleek dashboards, interactive components,
-                    or modern web apps, I love leveraging the power of React's
-                    ecosystem and Tailwind's utility-first approach to
-                    streamline development. Always eager to learn and push the
-                    boundaries of front-end development, I thrive in dynamic
-                    environments where creativity meets functionality.
-                  </p>
-                  <button className="px-4 sm:px-6 py-2 sm:py-3 border-2 border-purple-500 text-purple-600 rounded-lg hover:bg-purple-50 transition-all duration-300 w-full sm:w-auto font-medium hover:cursor-pointer">
-                    Download my CV
-                  </button>
-                </div>
-
-                <div>
-                  <h2 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-4">
-                    Skills
-                  </h2>
-                  <div className="flex flex-wrap gap-2 sm:gap-3">
-                    {skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 sm:px-5 py-1.5 sm:py-2.5 bg-purple-100 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-200 hover:cursor-pointer"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+            <div className="mt-8">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4 text-center lg:text-left">
+                Skills
+              </h2>
+              <div className="flex flex-wrap justify-center lg:justify-start gap-3">
+                {skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium hover:bg-purple-200 cursor-pointer transition-all"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           </div>

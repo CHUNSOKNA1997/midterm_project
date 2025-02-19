@@ -10,10 +10,10 @@ import {
 } from 'lucide-react';
 
 const Links = [
-  { href: '#Home', logo: <House size={24} /> },
-  { href: '#About', logo: <CircleUser size={24} /> },
-  { href: '#Projects', logo: <FolderKanban size={24} /> },
-  { href: '#Contact', logo: <Contact size={24} /> },
+  { href: '#home', logo: <House size={24} />, label: 'Home' },
+  { href: '#about', logo: <CircleUser size={24} />, label: 'About' },
+  { href: '#projects', logo: <FolderKanban size={24} />, label: 'Projects' },
+  { href: '#contact', logo: <Contact size={24} />, label: 'Contact' },
 ];
 
 const Sidebar = () => {
@@ -47,13 +47,13 @@ const Sidebar = () => {
           <CodeXml size={50} />
         </div>
 
-        <nav className="w-full flex-1 mt-8">
+        <nav className="w-full flex-1 mt-8 flex flex-col items-center">
           <ul className="flex flex-col space-y-2">
             {Links.map((link, index) => (
               <li key={index}>
                 <a
                   href={link.href}
-                  className="px-6 py-3 flex items-center gap-3 hover:bg-orange-100 hover:text-orange-500 transition-all duration-300 rounded-lg mx-2"
+                  className="px-6 py-3 flex items-center gap-3 hover:bg-purple-400 hover:text-white transition-colors duration-300 rounded-lg mx-2"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.logo}
