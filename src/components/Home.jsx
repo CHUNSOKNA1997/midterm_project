@@ -2,7 +2,8 @@ import React from 'react';
 import Sidebar from './Sidebar';
 import logo from '../assets/logo.svg';
 import { Facebook, Github, Linkedin, Mouse } from 'lucide-react';
-
+import { useRef } from 'react';
+import BlurText from '../blocks/TextAnimations/BlurText/BlurText';
 const socialMedia = [
   {
     href: '#',
@@ -18,15 +19,30 @@ const socialMedia = [
   },
 ];
 const Home = () => {
+  const containerRef = useRef(null);
   return (
     <>
-      <header className="flex flex-col justify-center items-center min-h-screen bg-[#eeedf1f2] space-y-12">
-        <img src={logo} alt="logo" />
-        <div className="flex justify-center items-center flex-col space-y-2">
-          <h1 className="text-purple-400 text-4xl font-bold">SOkNA Chun.</h1>
-          <p className="font-semibold text-xl">
-            Hiiii! I'm a Front-End Developer
-          </p>
+      <header className="flex flex-col justify-center items-center min-h-screen bg-[#eeedf1f2] space-y-12 text-center">
+        <img
+          src={logo}
+          alt="logo"
+          className="border-purple-600 border-[2px] rounded-full"
+        />
+        <div className="flex text-center items-center flex-col space-y-2">
+          <BlurText
+            text="Ayoooo! This is SOkNA Chun."
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className="text-3xl lg:text-5xl mb-8 font-bold"
+          />
+          <BlurText
+            text="Im a Front-End Developer"
+            delay={150}
+            animateBy="words"
+            direction="top"
+            className="text-xl lg:text-3xl mb-8 font-semibold"
+          />
         </div>
         <ul>
           <li className="flex space-x-4">
@@ -49,13 +65,16 @@ const Home = () => {
         >
           Hire Me!
         </a>
-        <div className="flex absolute bottom-5 flex-col items-center gap-4 animate-[bounce_2s_ease-in-out_infinite]">
+        <a
+          href="#about"
+          className="flex absolute bottom-5 flex-col items-center gap-4 animate-[bounce_2s_ease-in-out_infinite] hover:text-purple-500 hover:cursor-pointer transition-colors duration-300"
+        >
           <p className="text-sm font-medium opacity-80">Scroll Down!</p>
           <Mouse
             size={30}
             className="animate-[fadeInOut_2s_ease-in-out_infinite]"
           />
-        </div>
+        </a>
       </header>
       <Sidebar />
     </>
