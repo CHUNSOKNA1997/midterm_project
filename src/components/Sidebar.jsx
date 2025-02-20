@@ -38,7 +38,6 @@ const Sidebar = () => {
 
   const toggleSidebar = () => setIsOpen((prev) => !prev);
 
-  // Handle scroll progress
   useEffect(() => {
     const handleScroll = () => {
       const winScroll = document.documentElement.scrollTop;
@@ -53,7 +52,6 @@ const Sidebar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle intersection observer for active section
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -101,7 +99,7 @@ const Sidebar = () => {
 
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 lg:hidden z-30"
+          className="fixed inset-0 toggle-menu-bg transition-opacity duration-300 lg:hidden z-30"
           onClick={toggleSidebar}
           aria-hidden="true"
         />
