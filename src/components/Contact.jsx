@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Send } from 'lucide-react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Contact = () => {
   const [result, setResult] = useState('');
@@ -26,12 +28,17 @@ const Contact = () => {
       setResult(data.message);
     }
   };
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full min-h-screen lg:pl-[110px] flex justify-center items-center px-4">
       <form
         onSubmit={onSubmit}
         className="max-w-3xl w-full bg-white shadow-lg rounded-lg p-8"
+        data-aos="fade-up"
+        data-aos-anchor-placement="bottom-bottom"
+        data-aos-duration="1000"
       >
         <div className="text-center space-y-3">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">

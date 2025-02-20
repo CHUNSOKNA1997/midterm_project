@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import p1 from '../assets/p1.png';
 import p2 from '../assets/p2.png';
 import p3 from '../assets/p3.png';
 import p4 from '../assets/p4.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Projects = () => {
   const projects = [
@@ -31,7 +33,9 @@ const Projects = () => {
       tags: ['HTML', 'Tailwind'],
     },
   ];
-
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <div className="w-full min-h-screen px-4 lg:pl-[110px] mt-10 lg:mt-0">
       <div className="max-w-6xl mx-auto">
@@ -43,6 +47,8 @@ const Projects = () => {
             <div
               key={project.id}
               className="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border-2 border-purple-500 overflow-hidden"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
             >
               <div className="aspect-video">
                 <img

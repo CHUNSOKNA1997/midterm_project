@@ -33,7 +33,7 @@ const Links = [
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState('#home');
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const toggleSidebar = () => setIsOpen((prev) => !prev);
