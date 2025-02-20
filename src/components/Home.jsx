@@ -6,15 +6,15 @@ import { useRef } from 'react';
 import BlurText from '../blocks/TextAnimations/BlurText/BlurText';
 const socialMedia = [
   {
-    href: '#',
+    href: 'https://www.facebook.com/sokna.chun.1997',
     icon: <Facebook size={30} />,
   },
   {
-    href: '#',
+    href: 'https://www.linkedin.com/in/chun-sokna-449bba32b/',
     icon: <Linkedin size={30} />,
   },
   {
-    href: '#',
+    href: 'https://github.com/CHUNSOKNA1997',
     icon: <Github size={30} />,
   },
 ];
@@ -61,7 +61,7 @@ const Home = () => {
         </ul>
         <a
           href="mailto:chun.sokna.1222@gmail.com"
-          className="bg-red-500 py-3 px-6 rounded-md text-white font-semibold hover:bg-red-400 transition-colors duration-300"
+          className="bg-transparent border-[2px] border-purple-600 py-3 px-6 rounded-md text-black font-semibold hover:bg-purple-200 transition-colors duration-300"
         >
           Hire Me!
         </a>
