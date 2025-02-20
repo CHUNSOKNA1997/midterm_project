@@ -20,7 +20,7 @@ const socialMedia = [
 const Home = () => {
   return (
     <>
-      <header className="flex flex-col justify-center items-center h-screen bg-[#eeedf1f2] space-y-12">
+      <header className="flex flex-col justify-center items-center min-h-screen bg-[#eeedf1f2] space-y-12">
         <img src={logo} alt="logo" />
         <div className="flex justify-center items-center flex-col space-y-2">
           <h1 className="text-purple-400 text-4xl font-bold">SOkNA Chun.</h1>

@@ -13,8 +13,8 @@ const About = () => {
   ];
 
   return (
-    <main className="w-full min-h-screen lg:pl-[110px]">
-      <div className="max-w-6xl h-screen mx-auto mt-10">
+    <main className="w-full min-h-screen px-4 lg:pl-[110px]">
+      <div className="max-w-6xl mx-auto">
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center lg:text-left">
           About Me
         </h1>
