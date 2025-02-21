@@ -66,11 +66,14 @@ const About = () => {
               functionality.
             </p>
 
-            <div className="flex justify-center lg:justify-start">
+            <a
+              href="https://drive.google.com/file/d/1KEqmj3DhwkG2OcIA5fbeOhUjWLBMla9l/view?usp=drive_link"
+              className="flex justify-center lg:justify-start"
+            >
               <button className="px-6 py-3 border-2 border-purple-500 text-purple-600 rounded-lg hover:bg-purple-200 transition-all duration-300 font-medium hover:cursor-pointer">
                 Download my CV
               </button>
-            </div>
+            </a>
 
             <div className="mt-8">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4 text-center lg:text-left">
