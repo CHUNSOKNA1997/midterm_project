@@ -28,20 +28,20 @@ const Home = () => {
           alt="logo"
           className="border-purple-600 border-[2px] rounded-full"
         />
-        <div className="flex text-center items-center flex-col space-y-2">
+        <div className="flex text-center items-center flex-col space-y-2 mb-12">
           <BlurText
             text="Ayoooo! This is SOkNA Chun."
             delay={150}
             animateBy="words"
             direction="top"
-            className="text-3xl lg:text-5xl mb-8 font-bold"
+            className="text-2xl lg:text-4xl mb-12 font-bold text-center"
           />
           <BlurText
             text="Im a Front-End Developer"
             delay={150}
             animateBy="words"
             direction="top"
-            className="text-xl lg:text-3xl mb-8 font-semibold"
+            className="text-xl lg:text-3xl mb-12 font-semibold text-center"
           />
         </div>
         <ul>
