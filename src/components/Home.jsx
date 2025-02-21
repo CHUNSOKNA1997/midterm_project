@@ -22,7 +22,7 @@ const Home = () => {
   const containerRef = useRef(null);
   return (
     <>
-      <header className="flex flex-col justify-center items-center min-h-screen bg-[#eeedf1f2] space-y-12 text-center">
+      <header className="flex relative flex-col justify-center items-center min-h-screen bg-[#eeedf1f2] space-y-12 text-center">
         <img
           src={logo}
           alt="logo"
@@ -67,7 +67,7 @@ const Home = () => {
         </a>
         <a
           href="#about"
-          className="flex absolute bottom-5 flex-col items-center gap-4 animate-[bounce_2s_ease-in-out_infinite] hover:text-purple-500 hover:cursor-pointer transition-colors duration-300"
+          className="flex bottom-5 flex-col items-center gap-4 animate-[bounce_2s_ease-in-out_infinite] hover:text-purple-500 hover:cursor-pointer transition-colors duration-300"
         >
           <p className="text-sm font-medium opacity-80">Scroll Down!</p>
           <Mouse
